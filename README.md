@@ -4,7 +4,7 @@ _OneDay
 ===
 
 Hi. I'm a WordPress Theme built by the `Causeforce Dev Team`.
-Test
+
 My ultra-minimal CSS & sleek design keep me purring at optimal speeds.
 
 My backbone consists of:
