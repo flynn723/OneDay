@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/flynn723/OneDay)](http://oneday.org.au)
+[![Build Status](http://theoneday.org.au/wp-content/themes/oneday/img/oneday-logo.svg)](http://oneday.org.au)
 
 _OneDay
 ===
