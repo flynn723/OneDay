@@ -1,0 +1,49 @@
+/*@font-face {
+  font-family: 'Karbon';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Karbon'),
+  local('Karbon-Regular'),
+  url(fonts/Karbon-Regular.otf) format('otf');
+}
+
+@font-face {
+  font-family: 'Karbon';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Karbon-RegularItalic'),
+  local('Karbon-RegularItalic'),
+  url(fonts/Karbon-RegularItalic.otf) format('otf');
+}
+
+@font-face {
+  font-family: 'Karbon Bold';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Karbon-Bold'),
+  local('Karbon-Bold'),
+  url(fonts/Karbon-Bold.otf) format('otf');
+}
+
+@font-face {
+  font-family: 'Karbon';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Karbon-BoldItalic'),
+  local('Karbon-BoldItalic'),
+  url(fonts/Karbon-BoldItalic.otf) format('otf');
+}*/
+
+@font-face {
+  font-family: 'Karbon';
+  src: url('Karbon-Bold.otf') format('otf');
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Karbon', sans-serif;
+  font-weight: 900;
+}
+body, p{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
