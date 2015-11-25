@@ -12,21 +12,14 @@ get_header(); ?>
 .carousel-caption {
     background: #FEC52E;
 }
-.story-box p {
-    font-size: 18px;
-    color: #fff;
-    margin-bottom: 40px;
-}
 .story-box h3 {
     color: #fff;
     font-size: 36px;
     font-weight: 700;
-    letter-spacing: 1px;
     margin: 20px 0 40px;
 }
 .story-box p.number {
     font-weight: 700;
-    letter-spacing: 1px;
     font-size: 1.8em;
 }
 .story-box a.btn {
@@ -64,24 +57,43 @@ a.green-text-hover {
 }
 .orange-text-hover,
 a.orange-text-hover {
-	color: #e17f26;
+    color: #e17f26;
+}
+.story-box p {
+    font-size: 18px;
+    color: #fff;
+}
+.story-box a {
+    color: #fff;
+}
+@media screen and (min-width: 768px){
+    .story-box p {
+        margin-bottom: 8px;
+    }   
+}
+@media screen and (min-width: 992px){
+    .story-box p {
+        font-size: 18px;
+        color: #fff;
+        margin-bottom: 15px;
+    }   
 }
 </style>
-	<div id="storybox-content-wrapper" class="content-wrapper">
+    <div id="storybox-content-wrapper" class="content-wrapper">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+            <?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'template-parts/content', 'storyboxpage' ); ?>
+                <?php get_template_part( 'template-parts/content', 'storyboxpage' ); ?>
 
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
+                <?php
+                    // If comments are open or we have at least one comment, load up the comment template.
+                    if ( comments_open() || get_comments_number() ) :
+                        comments_template();
+                    endif;
+                ?>
 
-			<?php endwhile; // End of the loop. ?>
+            <?php endwhile; // End of the loop. ?>
 
-	</div><!-- end of <div id="homepage-content-wrapper" class="content-wrapper"> -->
+    </div><!-- end of <div id="homepage-content-wrapper" class="content-wrapper"> -->
 
 <?php get_footer(); ?>

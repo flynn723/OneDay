@@ -460,7 +460,7 @@ a.yellow-bg {
     .navbar-nav.main-menu .dropdown-menu li a {
       color: #fff;
       background: #0078C9; 
-      padding: 5px 20px;
+      padding: 15px 20px;
     }
     .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
         background-color: transparent;
