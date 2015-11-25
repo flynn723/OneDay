@@ -328,3 +328,75 @@ function oneday_social_boxes_func(){
 	get_template_part( 'template-parts/shortcode', 'socialboxes' );
 }
 add_shortcode('oneday_social_boxes', 'oneday_social_boxes_func');
+
+
+
+/* Creates shortcode [oneday_social_share_buttons] */
+function oneday_social_share_buttons_func(){
+	/**
+	 *
+	 * @package OneDay
+	 */
+	get_template_part( 'template-parts/shortcode', 'socialsharebuttons' );
+}
+add_shortcode('oneday_social_share_buttons', 'oneday_social_share_buttons_func');
+
+/*BreadCrumb ShortCode
+* Creates [breadcrumb]
+======================================== */
+/* BreadCrumb Function
+======================================== */
+function the_breadcrumb() {
+    global $post;
+    echo '<ul id="breadcrumbs">';
+    if (!is_home()) {
+        echo '<li><a href="';
+        echo get_site_url();
+	$pstTemp = False;
+	if (get_post_type( get_the_ID() ) == 'post'){
+        	echo '/blog';
+		$pstTemp = True;
+	}
+        echo '">';
+	if ($pstTemp){
+        	echo 'Blog';
+	} else {
+		echo 'Portfolio';
+	}
+        echo '</a></li><li class="separator"> &raquo; </li>';
+        if (is_category() || is_single()) {
+            echo '<li>';
+            the_category(' </li><li class="separator"> &raquo; </li><li> ');
+            if (is_single()) {
+                echo '</li><li class="separator"> &raquo; </li><li>';
+                the_title();
+                echo '</li>';
+            }
+        } elseif (is_page()) {
+            if($post->post_parent){
+                $anc = get_post_ancestors( $post->ID );
+                $title = get_the_title();
+                foreach ( $anc as $ancestor ) {
+                    $output = '<li><a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li> <li class="separator"> &raquo; </li>';
+                }
+                echo $output;
+                echo '<strong title="'.$title.'"> '.$title.'</strong>';
+            } else {
+                echo '<li><strong> '.get_the_title().'</strong></li>';
+            }
+        }
+    }
+    elseif (is_tag()) {single_tag_title();}
+    elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
+    elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
+    elseif (is_year()) {echo"<li>Archive for "; the_time('Y'); echo'</li>';}
+    elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
+    elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
+    elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
+    echo '</ul>';
+}
+function breadcrumb_short(){
+	return the_breadcrumb();
+}
+add_shortcode('breadcrumb','breadcrumb_short');
+
