@@ -347,7 +347,18 @@ add_shortcode('oneday_social_share_buttons', 'oneday_social_share_buttons_func')
 /* BreadCrumb Function
 ======================================== */
 function the_breadcrumb() {
-    global $post;
+?>
+<style type="text/css">
+#breadcrumbs {
+    padding: 0;
+}
+#breadcrumbs li {
+    list-style: none;
+    display: inline;
+}
+</style>
+	<?php 
+	    global $post;
     echo '<ul id="breadcrumbs">';
     if (!is_home()) {
         echo '<li><a href="';
@@ -361,7 +372,7 @@ function the_breadcrumb() {
 	if ($pstTemp){
         	echo 'Blog';
 	} else {
-		echo 'Portfolio';
+		echo 'Home';
 	}
         echo '</a></li><li class="separator"> &raquo; </li>';
         if (is_category() || is_single()) {
@@ -395,8 +406,4 @@ function the_breadcrumb() {
     elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
     echo '</ul>';
 }
-function breadcrumb_short(){
-	return the_breadcrumb();
-}
 add_shortcode('breadcrumb','breadcrumb_short');
-

@@ -50,7 +50,7 @@ jQuery(document).ready(function(){
       jQuery('.modal-body ul').prepend('<li>'+jQuery(this).html()+'</li>');     
     });
 
-    jQuery('#dynamicFooterModal').modal({show:true});
+    $('#dynamicFooterModal').modal({show:true});/* Requires a $ sign */
   });
   /* End of Add To Calendar Script */
 
@@ -70,11 +70,11 @@ jQuery(document).ready(function(){
       jQuery('.modal-title').html(title);
       jQuery('.modal-body').html('<img src="'+imgSRC+'" alt="'+title+'"width="100%"/>');
       
-      jQuery('#dynamicFooterModal').modal({show:true});
+      $('#dynamicFooterModal').modal({show:true});/* Requires a $ sign */
   });
 
   jQuery(function () {
-    jQuery('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="tooltip"]').tooltip()
   })
 
 });

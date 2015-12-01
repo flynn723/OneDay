@@ -40,7 +40,7 @@
 	$thumbnailToShare = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
 
 	$facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$urlToShare;
-	$twitterURL = 'https://twitter.com/intent/tweet?text='.$titleToShare.'&amp;url='.$urlToShare.'&amp;via=Crunchify';
+	$twitterURL = 'https://twitter.com/intent/tweet?text='.$titleToShare.'&amp;url='.$urlToShare.'&amp;via=OneDayBrisbane';
 	$googleURL = 'https://plus.google.com/share?url='.$urlToShare;
 	$pinterestURL = 'https://pinterest.com/pin/create/button/?url='.$urlToShare.'&amp;media='.$thumbnailToShare[0].'&amp;description='.$titleToShare;
 ?>

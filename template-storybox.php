@@ -16,7 +16,7 @@ get_header(); ?>
     color: #fff;
     font-size: 36px;
     font-weight: 700;
-    margin: 20px 0 40px;
+    margin: 5px 0 15px;
 }
 .story-box p.number {
     font-weight: 700;
@@ -76,6 +76,9 @@ a.orange-text-hover {
         font-size: 18px;
         color: #fff;
         margin-bottom: 15px;
+    }
+    .story-box h3 {
+        margin: 15px 0 40px;
     }   
 }
 </style>
